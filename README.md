@@ -1,2 +1,2 @@
 # Lynx
-the math drawing tool
+the math drawing tool, now open source
