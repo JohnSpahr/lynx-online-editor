@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+            <style type="text/css"> 
+                a:link {
+                    color:black;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15;
+                }
+                a:visited {
+                    color:black;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15;
+                }
+                a:hover {
+                    color: rgb(19, 117, 209);
+                }
+                .selectOption {
+                    width: 150px;
+                }
+                .select {
+                    border-style: solid;
+                    border-color: rgb(19, 117, 209);
+                    font-size: 15px;
+                    height: 30px;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    border-radius: 6px;
+                }
+                .txt {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 25px;
+                }
+                .minitxt {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15;
+                }
+                .canvas {
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    border-radius: 6px;
+                }
+                .field {
+                    size: 10;
+                    border-style: solid;
+                    border-color: rgb(19, 117, 209);
+                    padding: .5em;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    border-radius: 6px;
+                    color: rgb(0, 0 , 0);
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15px;
+                    text-decoration: none;
+                }
+                .color {
+                    background-color: #fff;
+                    padding: .5em;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    border-radius: 6px;
+                    color: rgb(0, 0, 0);
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 20px;
+                    text-decoration: none;
+                    border: none;
+                }
+                .color:hover {
+                    border: none;
+                    background: rgb(157, 173, 228);
+                    cursor:pointer;
+                }
+                .button {
+                    background-color: rgb(19, 117, 209);
+                    padding: .5em;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    border-radius: 6px;
+                    color: #fff;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 20px;
+                    text-decoration: none;
+                    border: none;
+                }
+                .button1 {
+                    background-color: rgb(19, 117, 209);
+                    padding: .5em;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    border-radius: 6px;
+                    color: #fff;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15px;
+                    text-decoration: none;
+                    border: none;
+                }
+                .button:hover {
+                    border: none;
+                    background: rgb(0, 140, 255);
+                    cursor:pointer;
+                }
+                .button1:hover {
+                    border: none;
+                    background: rgb(0, 140, 255);
+                    cursor:pointer;
+                }
+                .commands {
+                    min-height: 300px;
+                    max-height: 300px;
+                    min-width: 300px;
+                    max-width: 300px;
+                    resize: none;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    border-radius: 6px;
+                }
+            </style>
+	</head>
+	<body
+            <fieldset class="canvas">
+                    <legend class="txt">LYNX</legend>
+                    <label class="txt" id="coordinateLbl">0, 0</label>
+
+                    <br>
+                    <div>
+                        <canvas class="canvas" id="myCanvas" onmousedown="mouse(event);" width="500" height="300" style="border:1px solid #d3d3d3;"></canvas>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <textarea class="commands" id="log" readonly="true">LOG</textarea>
+                    
+                    </div>
+                    <label class="txt">Canvas size: 500x300</label>
+                    <br>
+                    <br>
+                    
+                    <label class="txt">Draw:&nbsp;</label>
+
+                    <select class="select" id="selection" onchange="SelectionChanged();">
+                        <option value="Line">Line</option>
+                        <option value="Rectangle">Rectangle</option>
+                        <option value="FilledRect">Filled Rectangle</option>
+                        <option value="Circle">Circle</option>
+                        <option value="FilledCircle">Filled Circle</option>
+                        <option value="Arc">Arc</option>
+                    </select>
+
+                    <br>
+                    <br>
+                    <fieldset class="canvas">
+                        <legend class="txt">Draw from</legend>
+                        <br>
+                        <label class="txt">X:</label>
+                        <input onkeypress="return txtChange1(event);" class="field" size="10" min="0" type="number" id="X1">
+                        &nbsp;
+                        <label class="txt">Y:<label>
+                        <input onkeypress="return txtChange2(event);" class="field" size="10" min="0" type="number" id="Y1">
+                        <br>
+                        <br>
+                    </label></label></fieldset>
+                    <br>
+                    <fieldset class="canvas">
+                        <legend class="txt">Draw to</legend>
+                        <br>
+                        <label class="txt" id="x2lbl">X:</label>
+                        <input onkeypress="return txtChange3(event);" class="field" size="10" min="0" type="number" id="X2">
+                        &nbsp;
+                        <label class="txt" id="y2lbl">Y:</label>
+                        <input onkeypress="return txtChange4(event);" class="field" size="10" min="0" type="number" id="Y2">
+                        <label class="txt" id="tempLbl" hidden="true">Y:</label>
+                        <input class="field" id="eAngle" size="10" min="0" type="number" hidden="true">
+                        
+                        <br>
+                        <br>
+                    </fieldset>
+                    <br>
+                    <br>
+                    <label class="txt">Color:&nbsp;</label>
+                    <input class="color" type="color" id="colorPicker">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label class="txt" id="thickLbl">Thickness:&nbsp;</label>
+                    <input class="field" type="number" id="thick" value="1" name="thickness" min="1" max="100">                  
+                    <br><br>
+                    
+                    <label id="styleLbl" class="txt">Style:&nbsp;</label>
+                    <select class="select" id="styleSelect">
+                        <option value="Solid">Solid</option>
+                        <option value="Dot">Dot</option>
+                        <option value="Dash">Dash</option>
+                        <option value="DashDot">Dash-Dot</option>
+                    </select>
+
+                    <br><br>
+
+                    <button class="button" onclick="draw();">Draw</button>
+                    &nbsp;
+                    <button class="button" onclick="Erase();">Erase</button>
+                    
+            </fieldset>
+            
+            <br><br>
+
+            <label class="txt">Background color:</label>
+            &nbsp;
+            <input class="color" type="color" id="backColor">
+            &nbsp;
+            <button class="color" onclick="setBackground();">Set</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="clearLogBtn" class="color" onclick="clearLog();">Clear log</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="about" class="color" onclick="about();">About</button>
+            <br><br><br>
+            <a href="https://tectrasystems.org/lynx-for-windows" target="_blank">Get Lynx for Windows</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://lynxwiki.weebly.com" target="_blank">The Lynx Wiki</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://lynxwiki.weebly.com/connect" target="_blank">Lynx Connect</a>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/JohnSpahr/lynx-online-editor" target="_blank">GitHub Page</a>
+            <br><br>
+            <label class="minitxt">Tip: Click on the canvas to view the coordinates of a specific location.</label> 
+            <br><br>
+            <script src="https://johnspahr.github.io/lynx-online-editor/engine.js"></script>
+	</body>
+</html>
+    
