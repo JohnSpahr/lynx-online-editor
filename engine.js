@@ -88,7 +88,7 @@
             }
 
             function about() {
-                alert("Lynx Online Editor\nVersion 1.8\n\nCreated by John Spahr\nhttps://tectrasystems.org")
+                alert("Lynx Online Editor\nVersion 1.8\n\nCreated by John Spahr\nhttps://tectrasystems.org");
             }
 
             function onRun() {
