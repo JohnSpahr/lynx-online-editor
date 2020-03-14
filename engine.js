@@ -109,7 +109,7 @@ function SelectionChanged() {
     document.getElementById("y2lbl").hidden = false;
     document.getElementById("x2lbl").innerText = "X:";
 
-    if (option.value === "Arc") {
+    if (option.value == "Arc") {
         document.getElementById("tempLbl").hidden = false;
         document.getElementById("eAngle").hidden = false;
         document.getElementById("tempLbl").innerText = "Ending Angle:";
@@ -122,7 +122,7 @@ function SelectionChanged() {
         document.getElementById("y2lbl").innerText = "Y:"
     }
 
-    if (option.value === "Line" || option.value === "Rectangle" || option.value === "Circle" || option.value === "Arc") {
+    if (option.value == "Line" || option.value == "Rectangle" || option.value == "Circle" || option.value == "Arc") {
         document.getElementById('thick').hidden = false;
         document.getElementById('thickLbl').hidden = false;
         document.getElementById('styleLbl').hidden = false;
@@ -135,7 +135,7 @@ function SelectionChanged() {
         document.getElementById('styleSelect').hidden = true;
     }
 
-    if (option.value === "Circle" || option.value === "FilledCircle") {
+    if (option.value == "Circle" || option.value == "FilledCircle") {
         document.getElementById("Y2").hidden = true;
         document.getElementById("y2lbl").hidden = true;
         document.getElementById("x2lbl").innerText = "Radius:   ";
@@ -148,15 +148,15 @@ function draw() {
     var ctx = c.getContext("2d");
     var lineStyle = "Solid";
 
-    if (styleSelection.value === "Dot") {
+    if (styleSelection.value == "Dot") {
         ctx.setLineDash([1, 1]);
         lineStyle = "Dot";
     }
-    if (styleSelection.value === "Dash") {
+    if (styleSelection.value == "Dash") {
         ctx.setLineDash([10, 10]);
         lineStyle = "Dash";
     }
-    if (styleSelection.value === "DashDot") {
+    if (styleSelection.value == "DashDot") {
         ctx.setLineDash([15, 3, 3, 3]);
         lineStyle = "Dash-Dot";
     }
