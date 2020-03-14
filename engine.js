@@ -1,4 +1,11 @@
 var option = document.getElementById('selection');
+//when this loads, paint canvas white
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#FFFFFF";
+ctx.beginPath();
+ctx.fillRect(0, 0, c.width, c.height);
+ctx.stroke();
 
 function txtChange1(e) {
     if (e.keyCode == 13) {
@@ -81,17 +88,11 @@ function mouse(e) {
 }
 
 function about() {
-    alert("Lynx Online Editor\nVersion 1.9.1\n\nCreated by John Spahr\nhttps://tectrasystems.org");
+    alert("Lynx Online Editor\nVersion 1.9.2\n\nCreated by John Spahr\nhttps://tectrasystems.org");
 }
 
 function onRun() {
-    //when this loads, paint canvas white
-    var c = document.getElementById('myCanvas');
-    var ctx = c.getContext("2d");
-    ctx.fillStyle = "#FFFFFF";
-    ctx.beginPath();
-    ctx.fillRect(0, 0, c.width, c.height);
-    ctx.stroke();
+    
 }
 
 function Erase() {
