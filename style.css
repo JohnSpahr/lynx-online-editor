@@ -1,0 +1,127 @@
+a:link {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15;
+}
+
+a:visited {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15;
+}
+
+a:hover {
+    color: rgb(19, 117, 209);
+}
+
+.selectOption {
+    width: 150px;
+}
+
+.select {
+    border-style: solid;
+    border-color: rgb(19, 117, 209);
+    font-size: 15px;
+    height: 30px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+}
+
+.txt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.minitxt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15;
+}
+
+.canvas {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+}
+
+.field {
+    size: 10;
+    border-style: solid;
+    border-color: rgb(19, 117, 209);
+    padding: .5em;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.color {
+    background-color: #fff;
+    padding: .5em;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+}
+
+.color:hover {
+    border: none;
+    background: rgb(157, 173, 228);
+    cursor: pointer;
+}
+
+.button {
+    background-color: rgb(19, 117, 209);
+    padding: .5em;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+}
+
+.button1 {
+    background-color: rgb(19, 117, 209);
+    padding: .5em;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+}
+
+.button:hover {
+    border: none;
+    background: rgb(0, 140, 255);
+    cursor: pointer;
+}
+
+.button1:hover {
+    border: none;
+    background: rgb(0, 140, 255);
+    cursor: pointer;
+}
+
+.commands {
+    min-height: 300px;
+    max-height: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    resize: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+}
