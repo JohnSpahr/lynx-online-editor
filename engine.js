@@ -57,7 +57,7 @@ function setBackground() {
         ctx.beginPath();
         ctx.fillRect(0, 0, c.width, c.height);
         ctx.stroke();
-        document.getElementById('log').value = document.getElementById('log').value + "\nSet background to: " + document.getElementById('colorPicker').value + " \n";
+        document.getElementById('log').value += "\nSet background to: " + document.getElementById('colorPicker').value + " \n";
     }
 }
 
@@ -88,11 +88,11 @@ function mouse(e) {
 }
 
 function about() {
-    alert("Lynx Online Editor\nVersion 1.9.2\n\nCreated by John Spahr\nhttps://tectrasystems.org");
+    alert("Lynx Online Editor\nVersion 1.9.3\n\nCreated by John Spahr\nhttps://tectrasystems.org");
 }
 
 function onRun() {
-    
+
 }
 
 function Erase() {
@@ -100,7 +100,7 @@ function Erase() {
         var c = document.getElementById('myCanvas');
         var ctx = c.getContext("2d");
         ctx.clearRect(0, 0, c.width, c.height);
-        document.getElementById('log').value = document.getElementById('log').value + "\nErased drawing.\n";
+        document.getElementById('log').value += "\nErased drawing.\n";
     }
 }
 
@@ -187,7 +187,7 @@ function draw() {
         ctx.moveTo(xone, yone);
         ctx.lineTo(xtwo, ytwo);
         ctx.stroke();
-        document.getElementById('log').value = document.getElementById('log').value + "\n\nDraw line\nFrom: " + xone + ", " + yone + "\nTo: " + xtwo + ", " + ytwo + "\nThickness: " + document.getElementById('thick').value + "\nColor: " + document.getElementById('colorPicker').value + "\nStyle: " + lineStyle;
+        document.getElementById('log').value += "\n\nDraw line\nFrom: " + xone + ", " + yone + "\nTo: " + xtwo + ", " + ytwo + "\nThickness: " + document.getElementById('thick').value + "\nColor: " + document.getElementById('colorPicker').value + "\nStyle: " + lineStyle;
     }
 
     if (option.value == "Rectangle") {
@@ -200,7 +200,7 @@ function draw() {
         ctx.strokeStyle = document.getElementById("colorPicker").value;
         ctx.lineWidth = thickness;
         ctx.strokeRect(xone, yone, xtwo, ytwo);
-        document.getElementById('log').value = document.getElementById('log').value + "\n\nDraw rectangle\nFrom: " + xone + ", " + yone + "\nTo: " + xtwo + ", " + ytwo + "\nThickness: " + document.getElementById('thick').value + "\nColor: " + document.getElementById('colorPicker').value + "\nStyle: " + lineStyle;
+        document.getElementById('log').value += "\n\nDraw rectangle\nFrom: " + xone + ", " + yone + "\nTo: " + xtwo + ", " + ytwo + "\nThickness: " + document.getElementById('thick').value + "\nColor: " + document.getElementById('colorPicker').value + "\nStyle: " + lineStyle;
     }
 
     if (option.value == "FilledRect") {
@@ -208,7 +208,7 @@ function draw() {
         ctx.beginPath();
         ctx.fillRect(xone, yone, xtwo, ytwo);
         ctx.stroke();
-        document.getElementById('log').value = document.getElementById('log').value + "\n\nDraw filled rectangle\nFrom: " + xone + ", " + yone + "\nTo: " + xtwo + ", " + ytwo + "\nColor: " + document.getElementById('colorPicker').value;
+        document.getElementById('log').value += "\n\nDraw filled rectangle\nFrom: " + xone + ", " + yone + "\nTo: " + xtwo + ", " + ytwo + "\nColor: " + document.getElementById('colorPicker').value;
     }
 
     if (option.value == "Circle") {
@@ -217,7 +217,7 @@ function draw() {
         ctx.lineWidth = thickness;
         ctx.arc(xone, yone, xtwo, 0, 2 * Math.PI);
         ctx.stroke();
-        document.getElementById('log').value = document.getElementById('log').value + "\n\nDraw circle\nFrom: " + xone + ", " + yone + "\nRadius: " + xtwo + "\nThickness: " + document.getElementById('thick').value + "\nColor: " + document.getElementById('colorPicker').value + "\nStyle: " + lineStyle;
+        document.getElementById('log').value += "\n\nDraw circle\nFrom: " + xone + ", " + yone + "\nRadius: " + xtwo + "\nThickness: " + document.getElementById('thick').value + "\nColor: " + document.getElementById('colorPicker').value + "\nStyle: " + lineStyle;
     }
 
     if (option.value == "FilledCircle") {
@@ -226,7 +226,7 @@ function draw() {
         ctx.stroke();
         ctx.fillStyle = document.getElementById('colorPicker').value;
         ctx.fill();
-        document.getElementById('log').value = document.getElementById('log').value + "\n\nDraw filled circle\nFrom: " + xone + ", " + yone + "\nRadius: " + xtwo + "\nColor: " + document.getElementById('colorPicker').value;
+        document.getElementById('log').value += "\n\nDraw filled circle\nFrom: " + xone + ", " + yone + "\nRadius: " + xtwo + "\nColor: " + document.getElementById('colorPicker').value;
     }
 
     if (option.value == "Arc") {
@@ -241,6 +241,6 @@ function draw() {
         ctx.lineWidth = thickness;
         ctx.arc(xone, yone, xtwo, ytwo * Math.PI, document.getElementById("eAngle").value * Math.PI, false);
         ctx.stroke();
-        document.getElementById('log').value = document.getElementById('log').value + "\n\nDraw arc\nFrom: " + xone + ", " + yone + "\nTo: " + xtwo + ", " + ytwo + "\nThickness: " + document.getElementById('thick').value + "\nColor: " + document.getElementById('colorPicker').value + "\nStyle: " + lineStyle;
+        document.getElementById('log').value += "\n\nDraw arc\nFrom: " + xone + ", " + yone + "\nTo: " + xtwo + ", " + ytwo + "\nThickness: " + document.getElementById('thick').value + "\nColor: " + document.getElementById('colorPicker').value + "\nStyle: " + lineStyle;
     }
 }
