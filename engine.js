@@ -85,7 +85,13 @@ function about() {
 }
 
 function onRun() {
-    //when this loads...
+    //when this loads, paint canvas white
+    var c = document.getElementById('myCanvas');
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "#FFFFFF";
+    ctx.beginPath();
+    ctx.fillRect(0, 0, c.width, c.height);
+    ctx.stroke();
 }
 
 function Erase() {
