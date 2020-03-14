@@ -57,7 +57,7 @@ function setBackground() {
         ctx.beginPath();
         ctx.fillRect(0, 0, c.width, c.height);
         ctx.stroke();
-        document.getElementById('log').value += "\nSet background to: " + document.getElementById('colorPicker').value + " \n";
+        document.getElementById('log').value += "\n\nSet background to: " + document.getElementById('colorPicker').value;
     }
 }
 
@@ -88,7 +88,7 @@ function mouse(e) {
 }
 
 function about() {
-    alert("Lynx Online Editor\nVersion 1.9.6\n\nCreated by John Spahr\nhttps://tectrasystems.org");
+    alert("Lynx Online Editor\nVersion 1.9.7\n\nCreated by John Spahr\nhttps://tectrasystems.org");
 }
 
 function onRun() {
@@ -100,7 +100,11 @@ function Erase() {
         var c = document.getElementById('myCanvas');
         var ctx = c.getContext("2d");
         ctx.clearRect(0, 0, c.width, c.height);
-        document.getElementById('log').value += "\nErased drawing.\n";
+        ctx.fillStyle = "#ffffff";
+        ctx.beginPath();
+        ctx.fillRect(0, 0, c.width, c.height);
+        ctx.stroke();
+        document.getElementById('log').value += "\n\nErased drawing.";
     }
 }
 
