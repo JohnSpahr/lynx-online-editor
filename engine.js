@@ -88,7 +88,7 @@ function mouse(e) {
 }
 
 function about() {
-    alert("Lynx Online Editor\nVersion 1.9.5\n\nCreated by John Spahr\nhttps://tectrasystems.org");
+    alert("Lynx Online Editor\nVersion 1.9.6\n\nCreated by John Spahr\nhttps://tectrasystems.org");
 }
 
 function onRun() {
@@ -240,6 +240,6 @@ function draw() {
         ctx.lineWidth = thickness;
         ctx.arc(xone, yone, xtwo, ytwo * Math.PI, document.getElementById("eAngle").value * Math.PI, false);
         ctx.stroke();
-        document.getElementById('log').value += "\n\nDraw arc\nAt: " + xone + ", " + yone + "\nRadius: " + xtwo + "\nStarting Angle: " + ytwo + "\nEnding Angle: " + document.getElementById("eAngle").value + "\nThickness: " + document.getElementById('thick').value + "\nColor: " + document.getElementById('colorPicker').value + "\nStyle: " + lineStyle;
+        document.getElementById('log').value += "\n\nDraw arc\nFrom: " + xone + ", " + yone + "\nRadius: " + xtwo + "\nStarting Angle: " + ytwo + "\nEnding Angle: " + document.getElementById("eAngle").value + "\nThickness: " + document.getElementById('thick').value + "\nColor: " + document.getElementById('colorPicker').value + "\nStyle: " + lineStyle;
     }
 }
