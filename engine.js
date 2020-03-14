@@ -88,7 +88,7 @@ function mouse(e) {
 }
 
 function about() {
-    alert("Lynx Online Editor\nVersion 1.9.3\n\nCreated by John Spahr\nhttps://tectrasystems.org");
+    alert("Lynx Online Editor\nVersion 1.9.4\n\nCreated by John Spahr\nhttps://tectrasystems.org");
 }
 
 function onRun() {
@@ -166,7 +166,6 @@ function draw() {
     document.getElementById('X2').text = document.getElementById('X2').value;
     document.getElementById('Y2').text = document.getElementById('Y2').value;
     document.getElementById('thick').text = document.getElementById('thick').value;
-    document.getElementById('log').text = document.getElementById('log').value;
 
     let xone = document.getElementById('X1').text;
     let yone = document.getElementById('Y1').text;
