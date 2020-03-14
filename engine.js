@@ -2,7 +2,7 @@ var option = document.getElementById('selection');
 //when this loads, paint canvas white
 var c = document.getElementById('myCanvas');
 var ctx = c.getContext("2d");
-ctx.fillStyle = "#FFFFFF";
+ctx.fillStyle = "#ffffff";
 ctx.beginPath();
 ctx.fillRect(0, 0, c.width, c.height);
 ctx.stroke();
