@@ -1,120 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-            <style type="text/css"> 
-                a:link {
-                    color:black;
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 15;
-                }
-                a:visited {
-                    color:black;
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 15;
-                }
-                a:hover {
-                    color: rgb(19, 117, 209);
-                }
-                .selectOption {
-                    width: 150px;
-                }
-                .select {
-                    border-style: solid;
-                    border-color: rgb(19, 117, 209);
-                    font-size: 15px;
-                    height: 30px;
-                    -moz-border-radius: 5px;
-                    -webkit-border-radius: 5px;
-                    border-radius: 6px;
-                }
-                .txt {
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 25px;
-                }
-                .minitxt {
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 15;
-                }
-                .canvas {
-                    -moz-border-radius: 5px;
-                    -webkit-border-radius: 5px;
-                    border-radius: 6px;
-                }
-                .field {
-                    size: 10;
-                    border-style: solid;
-                    border-color: rgb(19, 117, 209);
-                    padding: .5em;
-                    -moz-border-radius: 5px;
-                    -webkit-border-radius: 5px;
-                    border-radius: 6px;
-                    color: rgb(0, 0 , 0);
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 15px;
-                    text-decoration: none;
-                }
-                .color {
-                    background-color: #fff;
-                    padding: .5em;
-                    -moz-border-radius: 5px;
-                    -webkit-border-radius: 5px;
-                    border-radius: 6px;
-                    color: rgb(0, 0, 0);
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 20px;
-                    text-decoration: none;
-                    border: none;
-                }
-                .color:hover {
-                    border: none;
-                    background: rgb(157, 173, 228);
-                    cursor:pointer;
-                }
-                .button {
-                    background-color: rgb(19, 117, 209);
-                    padding: .5em;
-                    -moz-border-radius: 5px;
-                    -webkit-border-radius: 5px;
-                    border-radius: 6px;
-                    color: #fff;
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 20px;
-                    text-decoration: none;
-                    border: none;
-                }
-                .button1 {
-                    background-color: rgb(19, 117, 209);
-                    padding: .5em;
-                    -moz-border-radius: 5px;
-                    -webkit-border-radius: 5px;
-                    border-radius: 6px;
-                    color: #fff;
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 15px;
-                    text-decoration: none;
-                    border: none;
-                }
-                .button:hover {
-                    border: none;
-                    background: rgb(0, 140, 255);
-                    cursor:pointer;
-                }
-                .button1:hover {
-                    border: none;
-                    background: rgb(0, 140, 255);
-                    cursor:pointer;
-                }
-                .commands {
-                    min-height: 300px;
-                    max-height: 300px;
-                    min-width: 300px;
-                    max-width: 300px;
-                    resize: none;
-                    -moz-border-radius: 5px;
-                    -webkit-border-radius: 5px;
-                    border-radius: 6px;
-                }
-            </style>
+            	<link rel="stylesheet" type="text/css" href="https://johnspahr.github.io/lynx-online-editor/style.css">
+		<title>Lynx Online Editor</title>
 	</head>
 	<body
             <fieldset class="canvas">
@@ -153,9 +41,8 @@
                         &nbsp;
                         <label class="txt">Y:<label>
                         <input onkeypress="return txtChange2(event);" class="field" size="10" min="0" type="number" id="Y1">
-                        <br>
-                        <br>
-                    </label></label></fieldset>
+                        <br><br><br>
+		    </fieldset>
                     <br>
                     <fieldset class="canvas">
                         <legend class="txt">Draw to</legend>
@@ -165,7 +52,9 @@
                         &nbsp;
                         <label class="txt" id="y2lbl">Y:</label>
                         <input onkeypress="return txtChange4(event);" class="field" size="10" min="0" type="number" id="Y2">
-                        <label class="txt" id="tempLbl" hidden="true">Y:</label>
+                        &nbsp;
+                        <br><br>
+			<label class="txt" id="tempLbl" hidden="true">Y:</label>
                         <input class="field" id="eAngle" size="10" min="0" type="number" hidden="true">
                         
                         <br>
